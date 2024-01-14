@@ -1,0 +1,21 @@
+.social-btn {
+  color: $color-elephant;
+  outline: 1px solid rgba($color: $color-elephant, $alpha: 0.3);
+
+  @include hover-focus {
+    outline-color: $color-elephant;
+  }
+
+  @include active {
+    color: $color-default-white;
+    outline: none;
+    background-color: $color-navy-blue;
+  }
+
+  &--disabled {
+    color: $color-elephant;
+    outline-color: $color-elephant;
+    opacity: 0.3;
+    cursor: default;
+  }
+}

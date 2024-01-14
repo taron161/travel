@@ -1,0 +1,44 @@
+.title {
+  position: relative;
+  font-size: 35px;
+  line-height: 55px;
+  font-weight: 800;
+  margin: 0;
+  transform: translateY(12px);
+  margin-bottom: 4px;
+  padding-top: 1px;
+
+  @include vp-1199 {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 22px;
+    padding-top: 35px;
+    transform: none;
+    margin-bottom: 0;
+  }
+
+  &::after {
+    content: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 55px;
+    font-weight: 800;
+    line-height: 55px;
+    opacity: 0.03;
+    z-index: -1;
+
+    @include vp-1199 {
+      font-size: 40px;
+    }
+
+    @include vp-767 {
+      font-size: 26px;
+      line-height: 26px;
+    }
+  }
+}

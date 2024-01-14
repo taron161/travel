@@ -1,0 +1,45 @@
+.swiper-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: end;
+  width: 70px;
+  margin-bottom: 87px;
+
+  @include vp-1199 {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @include vp-767 {
+    width: 64px;
+    margin-bottom: 586px;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: $color-transparent;
+  box-shadow: inset 0 0 0 1px $color-default-white;
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+
+  @include vp-767 {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $color-default-white;
+}
+
+.swiper {
+  height: 800px;
+
+  @include vp-1199 {
+    height: 1024px;
+  }
+}

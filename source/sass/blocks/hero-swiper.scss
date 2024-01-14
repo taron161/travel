@@ -1,0 +1,68 @@
+.swiper-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: end;
+  width: 70px;
+  margin-bottom: 87px;
+
+  @include vp-1199 {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @include vp-767 {
+    width: 64px;
+    margin-bottom: 30px;
+  }
+}
+
+.swiper-pagination-bullet {
+  outline: none;
+  width: 10px;
+  height: 10px;
+  background-color: $color-transparent;
+  box-shadow: inset 0 0 0 1px $color-default-white;
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+
+  @include vp-767 {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+  @include hover {
+    background-color: #d9d9d9;
+    box-shadow: inset 0 0 0 1 $color-default-white;
+  }
+
+  @include active {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 0 0 1 $color-default-white;
+  }
+
+  @include focus {
+    background-color: $color-transparent;
+    border: 1px solid $color-default-white;
+    box-shadow: 0 0 0 1 rgba(255, 255, 255, 0.5);
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $color-default-white;
+}
+
+.hero__swiper.swiper {
+  height: 800px;
+
+  @include vp-1199 {
+    height: 1024px;
+  }
+
+  @include vp-767 {
+    height: 468px;
+  }
+}
